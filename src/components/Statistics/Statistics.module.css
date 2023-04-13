@@ -1,6 +1,7 @@
 .statistics{
-
+    list-style-type: none;
+    padding: 0;
 }
 .statisticsItem{
-    
+    color: rgb(169, 137, 137);
 }

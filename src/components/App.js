@@ -52,10 +52,12 @@ class App extends Component {
         <div className="container">
           <div className="wrapper">
             <Section id={SectionId1} title={'Please leave feedback'}>
-              <FeedbackOptions
-                options={['Good', 'Neutral', 'Bad']}
-                onLeaveFeedback={this.handleClickFeedback}
-              />
+              <div className="feedbackBtns">
+                <FeedbackOptions
+                  options={['Good', 'Neutral', 'Bad']}
+                  onLeaveFeedback={this.handleClickFeedback}
+                />
+              </div>
             </Section>
             <Section id={SectionId2} title={'Statistics'}>
               {good > 0 || neutral > 0 || bad > 0 ? (

@@ -1,3 +1,15 @@
+.feedbackButtonsItem
+{
+    display: flex;
+    justify-content: space-between;
+}
+
 .feedbackButtons{
-    
+    cursor: pointer;
+    border: none;
+    background-color: rgb(169, 137, 137);
+    color: rgb(210, 186, 186);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 7px rgba(170, 157, 157, 0.722);
 }
