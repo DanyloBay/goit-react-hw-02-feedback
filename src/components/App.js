@@ -14,10 +14,8 @@ class App extends Component {
     bad: 0,
   };
 
-  handleClickFeedback = event => {
-    event.preventDefault();
-    const btnName = event.target.textContent.toLowerCase();
-    const stateKey = btnName;
+  handleClickFeedback = option => {
+    const stateKey = option.toLowerCase();
     this.setState(prevState => {
       return {
         [stateKey]: prevState[stateKey] + 1,
@@ -33,13 +31,7 @@ class App extends Component {
   countPositiveFeedbackPercentage = () => {
     const totalFeedback = this.countTotalFeedback();
     const { good } = this.state;
-
-    let result = 0;
-
-    result =
-      totalFeedback > 0 ? Math.ceil((good / totalFeedback) * 100) : result;
-
-    return `${result}%`;
+    return totalFeedback > 0 && Math.ceil((good / totalFeedback) * 100);
   };
 
   render() {
@@ -54,13 +46,13 @@ class App extends Component {
             <Section id={SectionId1} title={'Please leave feedback'}>
               <div className="feedbackBtns">
                 <FeedbackOptions
-                  options={['Good', 'Neutral', 'Bad']}
+                  options={Object.keys(this.state)}
                   onLeaveFeedback={this.handleClickFeedback}
                 />
               </div>
             </Section>
             <Section id={SectionId2} title={'Statistics'}>
-              {good > 0 || neutral > 0 || bad > 0 ? (
+              {countTotalFeedback > 0 ? (
                 <Statistics
                   good={good}
                   neutral={neutral}

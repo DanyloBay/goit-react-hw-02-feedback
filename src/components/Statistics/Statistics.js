@@ -15,7 +15,7 @@ export const Statistics = ({
       <li className={css.statisticsItem}>Bad: {bad}</li>
       <li className={css.statisticsItem}>Total: {total}</li>
       <li className={css.statisticsItem}>
-        Positive feedback: {positivePercentage}
+        Positive feedback: {positivePercentage}%
       </li>
     </ul>
   );
