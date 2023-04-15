@@ -4,7 +4,7 @@
     justify-content: space-between;
 }
 
-.feedbackButtons{
+.feedbackBtns{
     cursor: pointer;
     border: none;
     background-color: rgb(169, 137, 137);
@@ -16,16 +16,16 @@
     color 250ms ease-in-out;
 }
 
-.feedbackButtons:first-child:hover{
+.feedbackBtns:first-child:hover{
     background-color: rgba(0, 255, 0, 0.511);
     color: #00e100;
 }
 
-.feedbackButtons:nth-child(0n+2):hover{
+.feedbackBtns:nth-child(0n+2):hover{
     color: rgb(255, 232, 232);
 }
 
-.feedbackButtons:last-child:hover {
+.feedbackBtns:last-child:hover {
     background-color: rgba(255, 0, 0, 0.511);
     color: red;
 }
